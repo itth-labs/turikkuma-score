@@ -7,17 +7,17 @@ permissions:
   pages: write
   id-token: write
 jobs: 
-build:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v6
-    - uses: actions/setup-node@v6
-      with:
-        node-version: '25'
-    - run: npm install
-    - run: npm run build
-    - uses: actions/configure-pages@v5
-    - uses: actions/upload-pages-artifact@v4
-      with:
-        path: './dist'
-    - uses: actions/deply-pages@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '25'
+      - run: npm install
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: './dist'
+      - uses: actions/deply-pages@v4
