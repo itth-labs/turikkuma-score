@@ -34,7 +34,7 @@ export class ScoreSet {
             }
             result.push([player, sum]);
         };
-        return result.sort((x) => x[1]);
+        return result.sort((x, y) => y[1] - x[1]);
     }
 
     average_score() {
@@ -49,7 +49,7 @@ export class ScoreSet {
             }
             result.push([player, sum / count]);
         };
-        return result.sort((x) => x[1]);
+        return result.sort((x, y) => y[1] - x[1]);
     }
 
     max_score() {
@@ -62,7 +62,7 @@ export class ScoreSet {
             }
             result.push([player, max]);
         };
-        return result.sort((x) => x[1]);
+        return result.sort((x, y) => y[1] - x[1]);
     }
     
     is_empty() {
