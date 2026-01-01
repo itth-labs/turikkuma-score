@@ -64,7 +64,7 @@ export class ScoreSet {
         };
         return result.sort((x, y) => y[1] - x[1]);
     }
-    
+
     is_empty() {
         return this.scores.size === 0;
     }
