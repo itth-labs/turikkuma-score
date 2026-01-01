@@ -13,7 +13,7 @@ export class ScoreSet {
         this.scores = new Map();
     }
 
-    init() {
+    clear() {
         this.scores.clear();
     };
 
@@ -63,6 +63,10 @@ export class ScoreSet {
             result.push([player, max]);
         };
         return result.sort((x) => -x[1]);
+    }
+    
+    is_empty() {
+        return this.scores.size === 0;
     }
 }
 
