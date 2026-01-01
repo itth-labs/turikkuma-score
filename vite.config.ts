@@ -21,4 +21,5 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     })
   ],
+  base: "/turikkuma-score/"
 })
