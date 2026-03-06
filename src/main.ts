@@ -65,21 +65,6 @@ export class ScoreSet {
         return result.sort((x, y) => y[1] - x[1]);
     }
 
-    minmax_score() {
-        const result: [string, number][] = [];
-        for (const player of this.scores.keys()) {
-            const player_scores = this.scores.get(player) as Map<number, number>;
-            var max = 0;
-            var min = 1 << 31; // sentinel
-            for (const score of player_scores?.values()) {
-                max = Math.max(max, score);
-                min = Math.min(min, score);
-            }
-            result.push([player, max - min]);
-        };
-        return result.sort((x, y) => x[1] - y[1]); // smaller to larger
-    }
-
     is_empty() {
         return this.scores.size === 0;
     }

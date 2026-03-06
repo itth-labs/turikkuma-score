@@ -54,9 +54,9 @@ const update_result = () => {
   for (const [player, sum] of scores.full_score()) {
     generated_text += `* ${player}: ${sum}\n`;
   }
-  generated_text += "\n\n### 最大-最小スコアギャップ\n";
-  for (const [player, gap] of scores.minmax_score()) {
-    generated_text += `* ${player}: ${gap}\n`;
+  generated_text += "\n\n### 平均スコア\n";
+  for (const [player, avg] of scores.average_score()) {
+    generated_text += `* ${player}: ${avg}\n`;
   }
   generated_text += "\n\n### 最高スコア\n";
   for (const [player, max] of scores.max_score()) {
