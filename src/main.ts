@@ -70,7 +70,7 @@ export class ScoreSet {
         for (const player of this.scores.keys()) {
             const player_scores = this.scores.get(player) as Map<number, number>;
             var max = 0;
-            var min = 1 << 31; // sentinel
+            var min = +Infinity; // sentinel
             for (const score of player_scores?.values()) {
                 max = Math.max(max, score);
                 min = Math.min(min, score);
